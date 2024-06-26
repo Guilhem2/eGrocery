@@ -1,3 +1,3 @@
 class User < ApplicationRecord
-  has_many :checkouts
+  has_many :checkouts, dependent: :destroy
 end
