@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="row">
+    <%= simple_form_for @checkout do |f| %>
+    <%= f.input :delivery_date %>
+    <%= f.hidden_field :user_id, value: @user.id %>
+    <%= f.hidden_field :baskets, value: @baskets %>
+    <%= f.button :submit, "Go to baskets", class: "btn btn-success"%>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<h1>Today's available baskets:</h1>
+<div class="grid-holder">
+  <div class="grid">
+    <% @baskets.each do |basket| %>
+      <div class="basket-holder">
+        <%= link_to "#{basket.name}", new_checkout_booking_path(@checkout, basket) %>
+        <%= "#{basket.content} " %>
+        <%= "for only #{basket.price}€" %>
+      </div>
+    <% end %>
+  </div>
+</div>
